@@ -96,9 +96,12 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  let noRepeats = array.filter((item, index) => {
+    return array.indexOf(item) >=index;
+  });
   
-  return cb()
+  return cb(noRepeats);
 
 }
 
-console.log(removeDuplicates(arrayWithDuplicates, logIt));
+removeDuplicates(arrayWithDuplicates, logIt);
