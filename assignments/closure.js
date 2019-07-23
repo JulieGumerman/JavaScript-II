@@ -36,7 +36,7 @@ console.log(countByFives());
 // ==== Challenge 3: Create a counter function with an object that can increment and decrement ====
 const counterFactory = (num1) => {
 
-    function increment(num1) {
+    function increment(number1) {
       return num1 + 4;
     }
 
@@ -52,4 +52,4 @@ const counterFactory = (num1) => {
   // `decrement` should decrement the counter variable and return it.
 };
 
-console.log(counterFactory(7));
+(counterFactory(7));
