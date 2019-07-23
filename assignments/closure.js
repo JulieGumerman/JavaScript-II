@@ -18,15 +18,38 @@ dogRulesChange;
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
-  // Return a function that when invoked increments and returns a counter variable.
+  let count = 0;
+  return function() {
+    count = count + 5;
+    return count;
+  }
 };
+
+const countByFives = counter();
+console.log(countByFives());
+console.log(countByFives());
+
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
 // newCounter(); // 2
 
 // ==== Challenge 3: Create a counter function with an object that can increment and decrement ====
-const counterFactory = () => {
+const counterFactory = (num1) => {
+
+    function increment(num1) {
+      return num1 + 4;
+    }
+
+    increment(num1);
+
+    function decrement(cb) {
+      return cb - 1;
+    }
+
+    console.log(decrement(increment));
   // Return an object that has two methods called `increment` and `decrement`.
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
 };
+
+console.log(counterFactory(7));

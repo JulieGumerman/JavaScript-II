@@ -90,8 +90,14 @@ contains("kleenex", items, logIt);
 
 /* STRETCH PROBLEM */
 
+const arrayWithDuplicates = [5, 5, 7, 4, 4, 4, 3, 3, 2, 2, 2, 2, 8];
+
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  return cb(array.filter((item, index) => array.indexOf(item) !==index));
+
 }
+
+console.log(removeDuplicates(arrayWithDuplicates, logIt));
