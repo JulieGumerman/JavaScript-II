@@ -34,22 +34,25 @@ console.log(countByFives());
 // newCounter(); // 2
 
 // ==== Challenge 3: Create a counter function with an object that can increment and decrement ====
-const counterFactory = (num1) => {
+const counterFactory = () => {
 
-    function increment(number1) {
-      return num1 + 4;
+    const countmobile = {
+      "decrement": function(num1){
+        return num1 - 3;
+      },
+      "increment": function(num1) {
+        return num1 + 4;
+      }
     }
 
-    increment(num1);
-
-    function decrement(cb) {
-      return cb - 1;
-    }
-
-    console.log(decrement(increment));
+    let incrementally = countmobile.increment(6);
+    let decrementally = countmobile.decrement(7);
+    
+    return `increment: ${incrementally} and decrement: ${decrementally};`
   // Return an object that has two methods called `increment` and `decrement`.
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
 };
 
-(counterFactory(7));
+console.log(counterFactory());
+
