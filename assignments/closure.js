@@ -1,6 +1,17 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function myYard () {
+  console.log("Yay, I have a yard");
+  
+  function myDog() {
+    console.log("No, it's my yard");
+  }
+  myDog();
+}
 
+let dogRulesChange = myYard();
+
+dogRulesChange;
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
